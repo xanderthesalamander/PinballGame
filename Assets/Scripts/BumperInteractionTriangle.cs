@@ -33,7 +33,7 @@ public class BumperInteractionTriangle : MonoBehaviour
         // If collision with a ball object
         if (collision.gameObject.tag == "ball")
         {
-            Debug.Log("Ball hit");
+            // Debug.Log("Ball hit");
             // Force value is random between minForce and maxForce
             forceValue = Random.Range(minForce, maxForce);
             // Debug.Log("Force value: " + forceValue);
