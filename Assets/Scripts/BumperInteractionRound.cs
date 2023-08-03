@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
-public class bumperPhysics : MonoBehaviour
+public class BumperInteractionRound : MonoBehaviour
 {
     [SerializeField]
     Canvas scoreCanvas;
