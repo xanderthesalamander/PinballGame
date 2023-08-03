@@ -698,17 +698,17 @@ PrefabInstance:
     - target: {fileID: 3157498497975773865, guid: 1261fe78a21af4377ac71b66d03f6108,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.36
+      value: 3.62
       objectReference: {fileID: 0}
     - target: {fileID: 3157498497975773865, guid: 1261fe78a21af4377ac71b66d03f6108,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.76
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 3157498497975773865, guid: 1261fe78a21af4377ac71b66d03f6108,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.48
+      value: -6.08
       objectReference: {fileID: 0}
     - target: {fileID: 3157498497975773865, guid: 1261fe78a21af4377ac71b66d03f6108,
         type: 3}
@@ -774,11 +774,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 115271932166062597, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: scoreCanvas
+      value: 
+      objectReference: {fileID: 864669026}
+    - target: {fileID: 279267449002357346, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: scoreCanvas
+      value: 
+      objectReference: {fileID: 864669026}
+    - target: {fileID: 1389496340161096230, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: scoreCanvas
+      value: 
+      objectReference: {fileID: 864669026}
     - target: {fileID: 2216711943405557626, guid: 978af86ab9949e14d8a547ec2836362c,
         type: 3}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2861887121752597296, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: scoreCanvas
+      value: 
+      objectReference: {fileID: 864669026}
     - target: {fileID: 3494852008663214884, guid: 978af86ab9949e14d8a547ec2836362c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1045,5 +1065,15 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 4892711015275279725, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: scoreCanvas
+      value: 
+      objectReference: {fileID: 864669026}
+    - target: {fileID: 7156671392703308978, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: scoreCanvas
+      value: 
+      objectReference: {fileID: 864669026}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 978af86ab9949e14d8a547ec2836362c, type: 3}
