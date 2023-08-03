@@ -18,11 +18,14 @@ public class bumperPhysics : MonoBehaviour
     // Explosion parameters (will be randomised)
     float explosionBoundValue;
     float explosionBoundRadius;
+    // Animator
+    Animator animator;
 
     // Start is called before the first frame update    
     void Start()
     {
         score = 0;
+        animator = GetComponent<Animator>();
     }
 
     // Triggered when something collides with the object
@@ -42,6 +45,8 @@ public class bumperPhysics : MonoBehaviour
             // Add to the score
             ScoreKeeper sk = scoreCanvas.GetComponent<ScoreKeeper>();
             sk.scoreAdd();
+            // Animation trigger
+            animator.SetTrigger("BallHit");
         }
     }
 }
