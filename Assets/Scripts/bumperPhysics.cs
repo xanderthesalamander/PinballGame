@@ -7,44 +7,41 @@ using UnityEngine.UI;
 
 public class bumperPhysics : MonoBehaviour
 {
-    public static int score=0;
-    // Start is called before the first frame update
+    [SerializeField]
+    Canvas scoreCanvas;
+    [SerializeField]
+    float minForce = 200.0f;
+    [SerializeField]
+    float maxForce = 400.0f;
+
+    public static int score = 0;
+    // Explosion parameters (will be randomised)
     float explosionBoundValue;
     float explosionBoundRadius;
 
-    [SerializeField]
-
-    public Vector3 localScale;
-    //private bool objCollided = false;
-    private float collideStartTime = 0;
-    [SerializeField]
-    Canvas scoreCanvas;
-        
+    // Start is called before the first frame update    
     void Start()
     {
-        //scoreboard = GetComponent<Text>();
         score = 0;
-        localScale = transform.localScale;
-        
-        
     }
+
+    // Triggered when something collides with the object
     private void OnCollisionEnter(Collision collision)
     {
-        //if(collision.gameObject.tag == "ball")
-        //{
-            explosionBoundValue = Random.Range(35.0f, 55.0f);
-            explosionBoundRadius = Random.Range(35.0f, 50.0f);
-
+        // If collision with a ball object
+        if (collision.gameObject.tag == "ball")
+        {
+            // Debug.Log("Ball hit");
+            // Force value is random between 
+            explosionBoundValue = Random.Range(minForce, maxForce);
+            explosionBoundRadius = Random.Range(50.0f, 70.0f);
+            // Debug.Log("Explosion value: " + explosionBoundValue);
+            // Debug.Log("Explosion radius: " + explosionBoundRadius);
+            // Add explosion force
             collision.rigidbody.AddExplosionForce(explosionBoundValue, transform.position, explosionBoundRadius);
-        ScoreKeeper sk = scoreCanvas.GetComponent<ScoreKeeper>();
-        sk.scoreAdd();
-        //objCollided = true;
-        collideStartTime = Time.time;
-           Debug.Log(explosionBoundRadius);
-        //}
-        
-    }
-    private void Update()
-    {
+            // Add to the score
+            ScoreKeeper sk = scoreCanvas.GetComponent<ScoreKeeper>();
+            sk.scoreAdd();
+        }
     }
 }
