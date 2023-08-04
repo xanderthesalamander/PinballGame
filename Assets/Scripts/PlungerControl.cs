@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Resources (tutorials):
+// https://www.youtube.com/watch?v=LXOy2uWjJFQ
+
 public class PlungerControl : MonoBehaviour
 {
     [SerializeField]
