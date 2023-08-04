@@ -10,10 +10,14 @@ public class PlungerControl : MonoBehaviour
 {
     [SerializeField]
     float maxPower;
+    [SerializeField]
+    GameObject plunger;
     float minPower = 0f;
     float power;
     Vector3 force;
     List<Rigidbody> balls;
+    // Animator
+    Animator animator;
     
     // Start is called before the first frame update
     void Start()
@@ -21,6 +25,8 @@ public class PlungerControl : MonoBehaviour
         // Initalise ball list
         balls = new List<Rigidbody>();
         power = 0f;
+        // Get plunger animator
+        animator = plunger.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,11 +37,15 @@ public class PlungerControl : MonoBehaviour
             // If space is pressed
             if (Input.GetKey(KeyCode.Space))
             {
+                // Animation pulling
+                animator.SetBool("pulling", true);
                 // Add power while it's less than the maximum
                 // It will take 2 seconds to reach maximum
                 power += maxPower * 0.5f * Time.deltaTime;
                 if (power > maxPower) {
                     power = maxPower;
+                    // Animation maxPull
+                    animator.SetTrigger("maxPull");
                 }
             }
             // If space is released
@@ -51,6 +61,8 @@ public class PlungerControl : MonoBehaviour
                     // Debug.DrawRay(ball.position, force * 10, new Color(255, 0, 0), 10f);
                     ball.AddForce(force);
                 }
+                // Animation parameter
+                animator.SetBool("pulling", false);
                 // Reset power
                 power = minPower;
             }
