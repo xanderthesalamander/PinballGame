@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class PlungerControl : MonoBehaviour
 {
-    // [SerializeField]
-    // Slider powerSlider;
     [SerializeField]
     float maxPower;
     float minPower = 0f;
@@ -20,8 +18,6 @@ public class PlungerControl : MonoBehaviour
         // Initalise ball list
         balls = new List<Rigidbody>();
         power = 0f;
-        // powerSlider.minValue = minPower;
-        // powerSlider.maxValue = maxPower;
     }
 
     // Update is called once per frame
@@ -47,9 +43,9 @@ public class PlungerControl : MonoBehaviour
                 foreach (Rigidbody ball in balls)
                 {
                     force = power * (-Vector3.forward);
-                    Debug.Log("Force: " + force);
-                    Debug.Log("Power: " + power);
-                    Debug.DrawRay(ball.position, force * 10, new Color(255, 0, 0), 10f);
+                    // Debug.Log("Force: " + force);
+                    // Debug.Log("Power: " + power);
+                    // Debug.DrawRay(ball.position, force * 10, new Color(255, 0, 0), 10f);
                     ball.AddForce(force);
                 }
                 // Reset power
@@ -62,10 +58,10 @@ public class PlungerControl : MonoBehaviour
     {
         if (other.gameObject.tag == "ball")
         {
-            Debug.Log("Ball is in plunger trigger");
+            // Debug.Log("Ball is in plunger trigger");
             // Add ball to list of balls
             balls.Add(other.gameObject.GetComponent<Rigidbody>());
-            Debug.Log("Balls: " + balls.Count);
+            // Debug.Log("Balls: " + balls.Count);
         }
     }
 
@@ -73,10 +69,10 @@ public class PlungerControl : MonoBehaviour
     {
         if (other.gameObject.tag == "ball")
         {
-            Debug.Log("Ball left plunger trigger");
+            // Debug.Log("Ball left plunger trigger");
             // Remove ball from list of balls
             balls.Remove(other.gameObject.GetComponent<Rigidbody>());
-            Debug.Log("Balls: " + balls.Count);
+            // Debug.Log("Balls: " + balls.Count);
         }
     }
 }
