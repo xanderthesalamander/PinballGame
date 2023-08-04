@@ -41,7 +41,7 @@ public class PlungerControl : MonoBehaviour
             // If space is released
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                Debug.Log("Launching ball!");
+                // Debug.Log("Launching ball!");
                 // Add power while it's less than the maximum
                 foreach (Rigidbody ball in balls)
                 {
