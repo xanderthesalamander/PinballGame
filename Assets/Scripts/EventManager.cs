@@ -8,8 +8,6 @@ public class EventManager : MonoBehaviour
     public delegate void BallDeath();
     //public event BallDeath onBallDeath;
 
-
-
     private void Update()
     {
         

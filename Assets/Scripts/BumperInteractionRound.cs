@@ -13,6 +13,8 @@ public class BumperInteractionRound : MonoBehaviour
     float minForce = 200.0f;
     [SerializeField]
     float maxForce = 400.0f;
+    [SerializeField]
+    int scoreValue = 20;
 
     public static int score = 0;
     // Explosion parameters (will be randomised)
@@ -47,6 +49,7 @@ public class BumperInteractionRound : MonoBehaviour
             sk.scoreAdd();
             // Animation trigger
             animator.SetTrigger("BallHit");
+            GameManager.Instance.Score += scoreValue;
         }
     }
 }
