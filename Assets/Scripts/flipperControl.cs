@@ -12,6 +12,9 @@ public class flipperControl : MonoBehaviour
     public string InputName;
     HingeJoint joint;
     AudioSource flipperHitAudio;
+
+    // boolean to check if the flipper is flipped - so the audio doesnt loop.
+    bool flipped = false;
     //GameObject scoreCanvas;
 
     
@@ -48,13 +51,13 @@ public class flipperControl : MonoBehaviour
             {
                 spring.targetPosition = pressedPosition;
             }
-
+            
             //  sk.score += 1;
-            if(!flipperHitAudio.isPlaying)
+            if(!flipperHitAudio.isPlaying && !flipped)
             {
                 flipperHitAudio.Play();
             }
-            
+            flipped = true;
 
 
         } else
@@ -66,7 +69,7 @@ public class flipperControl : MonoBehaviour
             {
                 spring.targetPosition = restPosition;
             }
-            
+            flipped = false;
         }
         
         
