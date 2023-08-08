@@ -11,6 +11,7 @@ public class flipperControl : MonoBehaviour
     float flipperDamper = 150f;
     public string InputName;
     HingeJoint joint;
+    AudioSource flipperHitAudio;
     //GameObject scoreCanvas;
 
     
@@ -20,7 +21,9 @@ public class flipperControl : MonoBehaviour
     void Start()
     {
         joint = GetComponent<HingeJoint>();
-       // scoreCanvas = GameObject.FindGameObjectWithTag("scoreCanvas");
+        // scoreCanvas = GameObject.FindGameObjectWithTag("scoreCanvas");
+
+        flipperHitAudio = GetComponent<AudioSource>();
 
     }
 
@@ -45,8 +48,14 @@ public class flipperControl : MonoBehaviour
             {
                 spring.targetPosition = pressedPosition;
             }
-            
+
             //  sk.score += 1;
+            if(!flipperHitAudio.isPlaying)
+            {
+                flipperHitAudio.Play();
+            }
+            
+
 
         } else
         {
