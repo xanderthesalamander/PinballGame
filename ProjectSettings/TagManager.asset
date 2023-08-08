@@ -16,13 +16,13 @@ TagManager:
   - 
   - 
   - IgnoreScoreboardNumber
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - IgnoreUpperLight
+  - IgnoreUpperLeftLight
+  - IgnoreUpperRightLight
+  - IgnoreMiddleLight
+  - IgnoreLowerLeftLight
+  - IgnoreLowerRightLight
+  - IgnoreLowerLight
   - 
   - 
   - 

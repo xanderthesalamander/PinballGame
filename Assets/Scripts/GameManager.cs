@@ -25,11 +25,5 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Score = 0;
-        InvokeRepeating("PrintScore", 2f, 2f);
-    }
-
-    void PrintScore()
-    {
-        Debug.Log("Score: " + Score);
     }
 }
