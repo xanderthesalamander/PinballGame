@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 1697148269542968551}
   - component: {fileID: 8885689523375244414}
   - component: {fileID: -4876008958195212820}
+  - component: {fileID: -3062407739364064305}
   m_Layer: 0
   m_Name: Bumper_Round2
   m_TagString: Obstacle
@@ -594,6 +595,7 @@ MonoBehaviour:
   scoreCanvas: {fileID: 0}
   minForce: 200
   maxForce: 400
+  scoreValue: 20
 --- !u!54 &1697148269542968551
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -629,6 +631,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3062407739364064305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421883380234451540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9449d20682ff3e949828b8340542b9ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 25
 --- !u!82 &-4876008958195212820
 AudioSource:
   m_ObjectHideFlags: 0
