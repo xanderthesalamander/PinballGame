@@ -15,14 +15,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - IgnoreScoreboardNumber
+  - IgnoreUpperLight
+  - IgnoreUpperLeftLight
+  - IgnoreUpperRightLight
+  - IgnoreMiddleLight
+  - IgnoreLowerLeftLight
+  - IgnoreLowerRightLight
+  - IgnoreLowerLight
   - 
   - 
   - 
