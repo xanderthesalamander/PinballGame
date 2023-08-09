@@ -21,11 +21,16 @@ public class BumperInteractionRound : MonoBehaviour
     // Animator
     Animator animator;
 
+    // Audio Source for bumper hit
+    AudioSource audioBumperHit;
+
     // Start is called before the first frame update    
     void Start()
     {
         score = 0;
         animator = GetComponent<Animator>();
+
+        audioBumperHit = GetComponent<AudioSource>();   
     }
 
     // Triggered when something collides with the object
@@ -47,6 +52,11 @@ public class BumperInteractionRound : MonoBehaviour
             sk.scoreAdd();
             // Animation trigger
             animator.SetTrigger("BallHit");
+
+            if(!audioBumperHit.isPlaying)
+            {
+                audioBumperHit.Play();
+            }
         }
     }
 }
