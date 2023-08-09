@@ -1030,12 +1030,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1243760429 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1574400322309383432, guid: 4ab48d949ecb67943a3260e661415a37,
-    type: 3}
-  m_PrefabInstance: {fileID: 2013855191}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1249315319
 PrefabInstance:
   m_ObjectHideFlags: 0
