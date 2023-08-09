@@ -595,7 +595,6 @@ MonoBehaviour:
   scoreCanvas: {fileID: 0}
   minForce: 200
   maxForce: 400
-  scoreValue: 20
 --- !u!54 &1697148269542968551
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -631,19 +630,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-3062407739364064305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2421883380234451540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9449d20682ff3e949828b8340542b9ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreValue: 25
 --- !u!82 &-4876008958195212820
 AudioSource:
   m_ObjectHideFlags: 0
@@ -654,8 +640,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 44542a98f45ed274aa7e2b1f718c5cd5, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -740,6 +726,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3062407739364064305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421883380234451540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9449d20682ff3e949828b8340542b9ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 25
 --- !u!1 &2684446770521774076
 GameObject:
   m_ObjectHideFlags: 0
