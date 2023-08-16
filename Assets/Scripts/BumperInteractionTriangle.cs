@@ -21,11 +21,14 @@ public class BumperInteractionTriangle : MonoBehaviour
     // Animator
     Animator animator;
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update    
     void Start()
     {
         score = 0;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
     // Triggered when something collides with the object
     private void OnCollisionEnter(Collision collision)
@@ -48,6 +51,10 @@ public class BumperInteractionTriangle : MonoBehaviour
             sk.scoreAdd();
             // Animation trigger
             animator.SetTrigger("BallHit");
+            if(! audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
         }
     }
 }

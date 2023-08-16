@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5355250804850503105}
   - component: {fileID: 5355250804850503106}
   - component: {fileID: 5355250804850503107}
-  - component: {fileID: -6141777356668371637}
   m_Layer: 0
   m_Name: Obstacles
   m_TagString: Untagged
@@ -88,25 +87,10 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5355250804850503116}
-  m_Material: {fileID: 13400000, guid: a0390eb6e58c7754ca46d0858b1d4dd8, type: 2}
+  m_Material: {fileID: 13400000, guid: 9c3b8019f309abc4a8c4815bb413f77b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &-6141777356668371637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5355250804850503116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42638b478d4da3f40b3bb3b78cb3a57e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreboard: {fileID: 0}
-  localScale: {x: 0, y: 0, z: 0}
-  scoreCanvas: {fileID: 0}

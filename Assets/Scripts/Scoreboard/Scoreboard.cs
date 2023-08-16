@@ -8,12 +8,15 @@ public class Scoreboard : MonoBehaviour
     // Holds the score split into an array. The number will be backwards,
     // so the ones place will be stored in scoreArray[0]
     private int[] scoreArray = new int[] {1,2,3,4,5,6};
+    int oldScore = 0;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         // Populate the digits array
         digits = GetComponentsInChildren<ScoreBoardNumber>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,11 @@ public class Scoreboard : MonoBehaviour
     void UpdateScore()
     {
         int score = GameManager.Instance.Score;
+        if((score - oldScore) > 200)
+        {
+            audioSource.Play();
+            oldScore = score;
+        }
 
         for (int i = 0; i < 6; i++){
             scoreArray[i] = score % 10;
