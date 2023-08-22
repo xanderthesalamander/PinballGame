@@ -5,28 +5,39 @@ using UnityEngine.UI;
 public class ReloadScene : MonoBehaviour
 {
     public Text livesRef;
-    public short lives;
 
     void Start(){
-        livesRef.text = "Lives : " + lives.ToString();
     }
 
-    void OnCollisionEnter (Collision collisionInfo){
-        if(collisionInfo.gameObject.tag == "ball"){
-            lives--;
-            livesRef.text = "Lives : " + lives.ToString();
-            if (lives == 0){
-                reload();
-            }
+    void Update(){
+        livesRef.text = "Lives : " + GameManager.Instance.Lives.ToString();
+
+    }
+
+    public void deadBall(){
+        Invoke(nameof(SceneReload), 2);
+    }
+
+    public void SceneReload(){
+        GameManager.Instance.Lives--;
+        livesRef.text = "Lives : " + GameManager.Instance.Lives.ToString();
+        
+        if (GameManager.Instance.Lives == 0){
+            ReloadGame();
+        } else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-    }
 
-    public void reload(){
+    }    
+
+    public void ReloadGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.Instance.Start();
+
      }
 
     public void QuitGame(){
-        // UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     } 
 }
