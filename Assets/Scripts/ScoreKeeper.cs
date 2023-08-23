@@ -9,7 +9,7 @@ public class ScoreKeeper : MonoBehaviour
     public int score = 0;
     [SerializeField]
     //TextMeshProUGUI tmp;
-    Text scoreText;
+    //Text scoreText;
     
     
 // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class ScoreKeeper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = score.ToString();
+        //scoreText.text = score.ToString();
     }
 
     public void scoreAdd()

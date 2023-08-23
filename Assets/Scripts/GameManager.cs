@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     // Stores the game score
     public int Score;
+    public short Lives;
 
     private void Awake()
     {
@@ -22,8 +23,9 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
+    public void Start()
     {
         Score = 0;
+        Lives = 3;
     }
 }
