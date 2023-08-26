@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     // Stores the game score
+    public int HighScore;
     public int Score;
     public short Lives;
 
@@ -27,5 +28,12 @@ public class GameManager : MonoBehaviour
     {
         Score = 0;
         Lives = 3;
+    }
+
+    public void Update()
+    {
+        if(Score > HighScore){
+            HighScore = Score;
+        }
     }
 }
