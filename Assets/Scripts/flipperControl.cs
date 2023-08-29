@@ -41,9 +41,9 @@ public class flipperControl : MonoBehaviour
         jlimits.min = -45F;
         // ScoreKeeper sk = scoreCanvas.GetComponent<ScoreKeeper>();
 
-        if (Input.GetAxis(InputName) == 1)
+        if (Input.GetAxis(InputName) == 1 || Input.GetKey(KeyCode.UpArrow))
         {
-            if (InputName == "LFlipper")
+            if (InputName == "LFlipper" )
             {
                 spring.targetPosition = pressedPosition * -1;
             }
@@ -51,7 +51,7 @@ public class flipperControl : MonoBehaviour
             {
                 spring.targetPosition = pressedPosition;
             }
-            
+
             //  sk.score += 1;
             if(!flipperHitAudio.isPlaying && !flipped)
             {
@@ -73,6 +73,7 @@ public class flipperControl : MonoBehaviour
         }
         
         
+
         joint.limits = jlimits;
         joint.spring = spring;
 
