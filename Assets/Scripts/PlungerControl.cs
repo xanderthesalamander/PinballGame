@@ -35,7 +35,7 @@ public class PlungerControl : MonoBehaviour
         // If there are balls in the trigger
         if (balls.Count > 0) {
             // If space is pressed
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetAxis("Plunger") == 1)
             {
                 // Animation pulling
                 animator.SetBool("pulling", true);
@@ -49,7 +49,7 @@ public class PlungerControl : MonoBehaviour
                 }
             }
             // If space is released
-            if (Input.GetKeyUp(KeyCode.Space)|| Input.GetKeyUp(KeyCode.DownArrow))
+            if (Input.GetButtonUp("Plunger"))
             {
                 // Debug.Log("Launching ball!");
                 // Add power while it's less than the maximum
