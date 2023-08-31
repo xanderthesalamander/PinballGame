@@ -41,7 +41,7 @@ public class flipperControl : MonoBehaviour
         jlimits.min = -45F;
         // ScoreKeeper sk = scoreCanvas.GetComponent<ScoreKeeper>();
 
-        if (Input.GetAxis(InputName) == 1 || Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetAxis(InputName) == 1)
         {
             if (InputName == "LFlipper" )
             {
