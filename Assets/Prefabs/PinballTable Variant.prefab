@@ -173,6 +173,92 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputName: LFlipper
+--- !u!1 &6648192430970903326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7995890558653202811}
+  - component: {fileID: 2338247135428966952}
+  - component: {fileID: 3459050847527218024}
+  - component: {fileID: 8292636727846087020}
+  - component: {fileID: 6488887803524844247}
+  m_Layer: 0
+  m_Name: Top glass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &7995890558653202811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648192430970903326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9459257, y: 4.06, z: -2.2430434}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1477585792713791980}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2338247135428966952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648192430970903326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 18.86004, y: 1, z: 31.100964}
+  m_Center: {x: 1.1680899, y: 0, z: 0.76792717}
+--- !u!65 &3459050847527218024
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648192430970903326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5039444, y: 4.537718, z: 30.431982}
+  m_Center: {x: -8.032328, y: -1.7741938, z: 0.4145155}
+--- !u!65 &8292636727846087020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648192430970903326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6414604, y: 4.713461, z: 30.301159}
+  m_Center: {x: 10.328503, y: -1.8567305, z: 0.42249298}
+--- !u!65 &6488887803524844247
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648192430970903326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 18.617825, y: 4.5213556, z: 0.63354874}
+  m_Center: {x: 1.0085278, y: -1.7606778, z: -14.642281}
 --- !u!1001 &1477585793188202355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1257,6 +1343,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -16.865
       objectReference: {fileID: 0}
+    - target: {fileID: 4397906080468841887, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 4.06977
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397906080468841887, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 10.42967
+      objectReference: {fileID: 0}
     - target: {fileID: 4578187964407512850, guid: 978af86ab9949e14d8a547ec2836362c,
         type: 3}
       propertyPath: m_Size.x
@@ -1436,6 +1532,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 10.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628167100913818592, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -2.1477323
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628167100913818592, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.0795243
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628167100913818592, guid: 978af86ab9949e14d8a547ec2836362c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 10.508934
       objectReference: {fileID: 0}
     - target: {fileID: 7897791934710455053, guid: 978af86ab9949e14d8a547ec2836362c,
         type: 3}
