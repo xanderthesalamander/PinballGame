@@ -370,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 4166141342142291377, guid: 271b8b2ac672c44aa9777c0fc96cfdfa,
         type: 3}
       propertyPath: m_Name
-      value: Ball (4)
+      value: 'Ball '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 271b8b2ac672c44aa9777c0fc96cfdfa, type: 3}
@@ -2183,17 +2183,17 @@ PrefabInstance:
     - target: {fileID: 1616524782232043795, guid: 480a0317d162645f8b8abf755ae707b0,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 4.0970583
+      value: 3.5670786
       objectReference: {fileID: 0}
     - target: {fileID: 1616524782232043795, guid: 480a0317d162645f8b8abf755ae707b0,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.8959479
+      value: 0.89444804
       objectReference: {fileID: 0}
     - target: {fileID: 1616524782232043795, guid: 480a0317d162645f8b8abf755ae707b0,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 10.501166
+      value: 11.019256
       objectReference: {fileID: 0}
     - target: {fileID: 2048294372787586946, guid: 480a0317d162645f8b8abf755ae707b0,
         type: 3}
