@@ -2555,7 +2555,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scoreCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1442997166}
     - target: {fileID: 1477585792713791979, guid: 69e10c7e7416f084aa8f0500c9747a7d,
         type: 3}
       propertyPath: m_Name
@@ -2660,22 +2660,22 @@ PrefabInstance:
         type: 3}
       propertyPath: scoreCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1442997166}
     - target: {fileID: 2455160376594753767, guid: 69e10c7e7416f084aa8f0500c9747a7d,
         type: 3}
       propertyPath: scoreCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1442997166}
     - target: {fileID: 3513801546877780164, guid: 69e10c7e7416f084aa8f0500c9747a7d,
         type: 3}
       propertyPath: scoreCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1442997166}
     - target: {fileID: 3543912868753827238, guid: 69e10c7e7416f084aa8f0500c9747a7d,
         type: 3}
       propertyPath: scoreCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1442997166}
     - target: {fileID: 5356836030426493186, guid: 69e10c7e7416f084aa8f0500c9747a7d,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -2685,7 +2685,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scoreCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1442997166}
     - target: {fileID: 7690700383418144249, guid: 69e10c7e7416f084aa8f0500c9747a7d,
         type: 3}
       propertyPath: m_LocalPosition.x
