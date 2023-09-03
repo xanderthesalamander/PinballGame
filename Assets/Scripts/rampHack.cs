@@ -32,12 +32,12 @@ public class rampHack : MonoBehaviour
         // Check ball in trigger
         bool ballInRange = balls.Count > 0;
         if (flipperPressed) {
-            Debug.Log("Pressed");
+            // Debug.Log("Pressed");
             foreach (Rigidbody ball in balls) {
                 // Chance
                 bool chance = Random.Range(0, 1) <= rampHitProbability;
                 if (chance) {
-                    Debug.Log("Shoot");
+                    // Debug.Log("Shoot");
                     // Apply force towards target
                     Vector3 force = power * (target.transform.position - ball.transform.position);
                     ball.AddForce(force);
@@ -48,7 +48,7 @@ public class rampHack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "ball") {
-            Debug.Log("Ball is in flipper trigger");
+            // Debug.Log("Ball is in flipper trigger");
             // Add ball to list of balls
             balls.Add(other.gameObject.GetComponent<Rigidbody>());
             // Debug.Log("Balls: " + balls.Count);
@@ -58,7 +58,7 @@ public class rampHack : MonoBehaviour
 
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "ball") {
-            Debug.Log("Ball left flipper trigger");
+            // Debug.Log("Ball left flipper trigger");
             // Remove ball from list of balls
             balls.Remove(other.gameObject.GetComponent<Rigidbody>());
             // Debug.Log("Balls: " + balls.Count);
