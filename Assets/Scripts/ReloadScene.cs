@@ -10,19 +10,20 @@ public class ReloadScene : MonoBehaviour
     }
 
     void Update(){
-        livesRef.text = "Lives : " + GameManager.Instance.Lives.ToString();
+       
 
     }
 
     public void deadBall(){
-        Invoke(nameof(SceneReload), 2);
+        Invoke(nameof(SceneReload), 3);
     }
 
     public void SceneReload(){
         GameManager.Instance.Lives--;
-        livesRef.text = "Lives : " + GameManager.Instance.Lives.ToString();
+       
         
         if (GameManager.Instance.Lives == 0){
+            GameManager.Instance.endGame();
             ReloadGame();
         } else {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

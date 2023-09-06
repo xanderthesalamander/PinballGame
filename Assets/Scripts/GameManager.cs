@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int HighScore;
     public int Score;
     public short Lives;
+    ParticleSystem Confetti;
 
     private void Awake()
     {
@@ -22,18 +23,37 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        
     }
 
     public void Start()
     {
         Score = 0;
         Lives = 3;
+        Confetti = GameObject.Find("Confetti").GetComponent<ParticleSystem>();
     }
 
     public void Update()
     {
+        
+
+        
+    }
+
+    public void deadBall(){
         if(Score > HighScore){
             HighScore = Score;
         }
+
+    }
+    
+
+    public void endGame(){     
+        if(Score >= HighScore){
+            var emission = Confetti.emission;
+            emission.rateOverTime = HighScore;
+            Confetti.Play();
+        }
+        
     }
 }
