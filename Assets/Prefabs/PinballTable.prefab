@@ -2943,7 +2943,7 @@ HingeJoint:
   m_Anchor: {x: 0.07, y: 0.92, z: 0.36}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 3.0170784, y: 0.89444804, z: 11.409255}
+  m_ConnectedAnchor: {x: 3.5670786, y: 0.89444804, z: 11.019256}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -3461,15 +3461,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a01030eb8f28cca4abbcc9772d9b6550, type: 3}
---- !u!4 &2010779838984093430 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a01030eb8f28cca4abbcc9772d9b6550,
-    type: 3}
-  m_PrefabInstance: {fileID: 2048294373343664413}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1201450858476840012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a01030eb8f28cca4abbcc9772d9b6550,
+    type: 3}
+  m_PrefabInstance: {fileID: 2048294373343664413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2010779838984093430 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a01030eb8f28cca4abbcc9772d9b6550,
     type: 3}
   m_PrefabInstance: {fileID: 2048294373343664413}
   m_PrefabAsset: {fileID: 0}
