@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class BumperInteractionTriangle : MonoBehaviour
 {
-    [SerializeField]
-    Canvas scoreCanvas;
+    // [SerializeField]
+    // Canvas scoreCanvas;
     [SerializeField]
     float minForce;
     [SerializeField]
@@ -23,12 +23,16 @@ public class BumperInteractionTriangle : MonoBehaviour
 
     AudioSource audioSource;
 
+    ScoreKeeper sk;
+
     // Start is called before the first frame update    
     void Start()
     {
         score = 0;
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        sk = GameObject.Find("ScoreCanvas").GetComponent<ScoreKeeper>();
+
     }
     // Triggered when something collides with the object
     private void OnCollisionEnter(Collision collision)
@@ -47,7 +51,6 @@ public class BumperInteractionTriangle : MonoBehaviour
             // Debug.DrawRay(collision.contacts[0].point, force * 10, new Color(255, 0, 0), 10f);
             collision.rigidbody.AddForce(force * forceValue);
             // Add to the score
-            ScoreKeeper sk = scoreCanvas.GetComponent<ScoreKeeper>();
             sk.scoreAdd();
             // Animation trigger
             animator.SetTrigger("BallHit");

@@ -23,10 +23,11 @@ public class GameEnd : MonoBehaviour
     {
         if(other.gameObject.tag == "ball")
         {
-            //Debug.Log("Minus 1 Life");
+          
             rs.deadBall();
+            GameManager.Instance.deadBall();
             gameEndAudioSource.Play();
         }
-        //Debug.Log(other.gameObject.tag);
+     
     }
 }

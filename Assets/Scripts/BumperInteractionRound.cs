@@ -7,12 +7,13 @@ using UnityEngine.UI;
 
 public class BumperInteractionRound : MonoBehaviour
 {
-    [SerializeField]
-    Canvas scoreCanvas;
+    //[SerializeField]
+    //Canvas scoreCanvas;
     [SerializeField]
     float minForce = 200.0f;
     [SerializeField]
     float maxForce = 400.0f;
+
 
     public static int score = 0;
     // Explosion parameters (will be randomised)
@@ -24,13 +25,15 @@ public class BumperInteractionRound : MonoBehaviour
     // Audio Source for bumper hit
     AudioSource audioBumperHit;
 
+    ScoreKeeper sk;
     // Start is called before the first frame update    
     void Start()
     {
         score = 0;
         animator = GetComponent<Animator>();
-
+        //scoreCanvas = GameObject.Find("ScoreCanvas");
         audioBumperHit = GetComponent<AudioSource>();   
+        sk = GameObject.Find("ScoreCanvas").GetComponent<ScoreKeeper>();
     }
 
     // Triggered when something collides with the object
@@ -48,7 +51,7 @@ public class BumperInteractionRound : MonoBehaviour
             // Add explosion force
             collision.rigidbody.AddExplosionForce(explosionBoundValue, transform.position, explosionBoundRadius);
             // Add to the score
-            ScoreKeeper sk = scoreCanvas.GetComponent<ScoreKeeper>();
+          
             sk.scoreAdd();
             // Animation trigger
             animator.SetTrigger("BallHit");
