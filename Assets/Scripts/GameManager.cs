@@ -58,7 +58,12 @@ public class GameManager : MonoBehaviour
     public void endGame(){     
         if(Score >= HighScore){
             var emission = Confetti.emission;
-            emission.rateOverTime = HighScore;
+            if(Score > 500){
+                emission.rateOverTime = HighScore/2;
+            } else {
+                emission.rateOverTime = HighScore;
+            }
+            
             Confetti.Play();
         }
     }
