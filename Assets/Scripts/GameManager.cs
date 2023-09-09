@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int Score;
     public short Lives;
     ParticleSystem Confetti;
+    AudioSource BGM;
 
     private void Awake()
     {
@@ -23,20 +24,19 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        
+        Confetti = GameObject.Find("Confetti").GetComponent<ParticleSystem>();
+        BGM = GameObject.Find("BGM").GetComponent<AudioSource>();
+        BGM.Play();
     }
 
     public void Start()
     {
         Score = 0;
         Lives = 3;
-        Confetti = GameObject.Find("Confetti").GetComponent<ParticleSystem>();
     }
 
     public void Update()
     {
-        
-
         
     }
 
@@ -44,16 +44,27 @@ public class GameManager : MonoBehaviour
         if(Score > HighScore){
             HighScore = Score;
         }
-
+        if(Lives == 3){
+            BGM.pitch = 2;
+        } else if (Lives == 2){
+            BGM.pitch = 3;
+        } else {
+            BGM.pitch = 1;
+        }
+        
     }
     
 
     public void endGame(){     
         if(Score >= HighScore){
             var emission = Confetti.emission;
-            emission.rateOverTime = HighScore;
+            if(Score > 500){
+                emission.rateOverTime = HighScore/2;
+            } else {
+                emission.rateOverTime = HighScore;
+            }
+            
             Confetti.Play();
         }
-        
     }
 }
