@@ -2622,7 +2622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 530312846}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -2785,7 +2785,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 530312846}
         m_MethodName: ReloadGame
         m_Mode: 1
         m_Arguments:
