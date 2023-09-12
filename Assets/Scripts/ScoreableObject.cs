@@ -23,4 +23,11 @@ public class ScoreableObject : MonoBehaviour
             GameManager.Instance.Score += scoreValue;
         }
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.tag == "ball")
+        {
+            GameManager.Instance.Score += scoreValue;
+        }
+    }
 }
