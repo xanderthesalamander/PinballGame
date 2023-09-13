@@ -4,15 +4,8 @@ using UnityEngine.UI;
 
 public class ReloadScene : MonoBehaviour
 {
-    public Text livesRef;
+    
 
-    void Start(){
-    }
-
-    void Update(){
-       
-
-    }
 
     public void deadBall(){
         Invoke(nameof(SceneReload), 3);
@@ -21,7 +14,6 @@ public class ReloadScene : MonoBehaviour
     public void SceneReload(){
         GameManager.Instance.Lives--;
        
-        
         if (GameManager.Instance.Lives == 0){
             GameManager.Instance.endGame();
             ReloadGame();
@@ -38,7 +30,13 @@ public class ReloadScene : MonoBehaviour
      }
 
     public void QuitGame(){
-        // UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     } 
+
+    public void PlayGame(){
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    } 
+
+
 }
