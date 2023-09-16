@@ -30,12 +30,16 @@ public class ReloadScene : MonoBehaviour
      }
 
     public void QuitGame(){
-        UnityEditor.EditorApplication.isPlaying = false;
+       // UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     } 
 
     public void PlayGame(){
        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    } 
+
+    public void MainMenu(){
+       SceneManager.LoadScene("MainMenu");
     } 
 
 
